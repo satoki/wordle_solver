@@ -3,8 +3,7 @@ import datetime
 import requests
 
 
-# wordle_js = requests.get("https://www.powerlanguage.co.uk/wordle/main.e65ce0a5.js")
-wordle_js = requests.get("https://www.nytimes.com/games/wordle/main.da722f54.js")
+wordle_js = requests.get("https://www.nytimes.com/games/wordle/main.18637ca1.js")
 c_words = re.search("(?P<w_list>\"cigar\".*?\"shave\")", wordle_js.text).group("w_list").split(",")
 f_min= datetime.datetime(year=2021, month=6, day=18)
 today = datetime.datetime.now()
